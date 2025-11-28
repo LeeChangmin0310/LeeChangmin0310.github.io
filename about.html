@@ -6,8 +6,10 @@
 	<title>About | Changmin Lee</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico">
+
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -16,6 +18,44 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
+    
+    <style>
+        /* 인용구 (Vision) 스타일 */
+        .vision-quote {
+            color: #ffffff !important;
+            font-size: 30px;
+            line-height: 1.4;
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        /* 비전 설명 텍스트 */
+        .vision-desc {
+            color: #b0b0b0 !important;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* 본문 텍스트 스타일 */
+        .about-text {
+            color: #b0b0b0 !important;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        /* 강조 텍스트 (굵게) */
+        .about-text strong {
+            color: #fff !important;
+            font-weight: 700;
+        }
+        /* Interest 섹션의 설명글 */
+        .services p {
+            color: #b0b0b0 !important;
+        }
+    </style>
 	</head>
 	<body>
 
@@ -28,9 +68,9 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li class="active"><a href="about.html">About</a></li>
-							<li><a href="publications.html">Publications</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="cv.html">CV</a></li>
+							<li><a href="publications.html">Publications</a></li> 
+							<li><a href="projects.html">Projects</a></li> 
+							<li><a href="cv.html">CV</a></li> 
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -60,21 +100,25 @@
 				</div>
 				<div class="row row-padded-bottom">
 					<div class="col-md-5 animate-box">
-						<img class="img-responsive about-img" src="images/profile.jpg" alt="Changmin Lee">
+						<img class="img-responsive about-img" src="images/profile.jpg" alt="Changmin Lee" style="width:100%; border-radius:10px;">
 					</div>
 					<div class="col-md-6 col-md-push-1 animate-box">
 						<div class="about-desc">
-							<h2><span>Changmin</span><span>Lee</span></h2>
+							<div class="about-static-title">
+                                <h2 style="margin-bottom: 10px;">Changmin Lee</h2>
+                                <h2 style="color: #4b6cb7; font-weight: 300;">My Story</h2>
+                            </div>
 							<div class="desc">
 								<div class="rotate">
 									<h2 class="heading">Story</h2>
 								</div>
-								<p><strong>"How does AI learn like humans?"</strong></p>
-                                <p>My academic journey began with this fundamental question. While leading the academic club 'BAMBOO', I explored the principles of AI with my peers. Through various projects, I realized that many AI methodologies mimic the principles of nature and life, much like how the human visual cortex inspired CNNs.</p>
-                                <p>This insight led me to <strong>Brain Decoding</strong>. I am convinced that a deep understanding of the brain will be the breakthrough for next-generation AI. I am now dedicated to realizing the <strong>"AI-to-Brain"</strong> paradigm, where we not only mimic the brain to improve AI but also use advanced AI models to understand the human brain.</p>
-								<p class="colorlib-social-icons">
+								<p class="about-text"><strong>"How does AI learn like humans?"</strong></p>
+                                <p class="about-text">My academic journey began with this fundamental question. While leading the academic club <em>BAMBOO</em>, I explored the principles of AI with my peers. Through various projects, I realized that many AI methodologies mimic the principles of nature and life, much like how the human visual cortex inspired CNNs.</p>
+                                <p class="about-text">This insight led me to <strong>Brain Decoding</strong>. I realized that a deep understanding of the brain could be the breakthrough for next-generation AI. Now, I aim to realize the <strong>"AI-to-Brain"</strong> paradigm—using advanced AI models not just to mimic the brain, but to understand it.</p>
+								
+                                <p class="colorlib-social-icons">
 									<a href="https://github.com/LeeChangmin0310" target="_blank"><i class="icon-github"></i></a>
-									<a href="https://www.linkedin.com/in/changmin-lee-brightjade" target="_blank"><i class="icon-linkedin2"></i></a>
+                                    <a href="https://www.linkedin.com/in/changmin-lee-brightjade" target="_blank"><i class="icon-linkedin2"></i></a>
 								</p>
 								<p><a href="cv.html" class="btn btn-primary btn-outline">View Curriculum Vitae</a></p>
 							</div>
@@ -84,53 +128,7 @@
 			</div>
 		</div>
 
-        <div id="colorlib-services">
-			<div class="container">
-				<div class="row text-center">
-					<h2 class="bold">Interests</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="services-flex">
-							<div class="one-third">
-								<div class="row">
-									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Focus</span>
-										<h2>Research Interests</h2>
-										<p>My research goal is to internalize the brain's computational principles into AI models and use them to explore the brain again.</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="rotate">
-											<h2 class="heading">Focus</h2>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="services animate-box">
-											<h3>1 - Brain-Inspired AI</h3>
-											<p>Developing AI architectures inspired by neural mechanisms, such as the dual-stream visual pathways (ventral/dorsal) and hierarchical processing, to enhance model robustness and interpretability.</p>
-										</div>
-										<div class="services animate-box">
-											<h3>2 - Brain-Computer Interface (BCI)</h3>
-											<p>Decoding human intentions and visual experiences from non-invasive signals (EEG, fMRI). I aim to build practical BCI systems that can reconstruct visual stimuli or detect emotional states.</p>
-										</div>
-										<div class="services animate-box">
-											<h3>3 - Multi-modal Learning</h3>
-											<p>Integrating various modalities—such as vision, language, and physiological signals—to create more comprehensive AI models. Examples include Text-to-3D generation and EEG-fMRI fusion.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="one-forth services-img" style="background-image: url(images/work-1.jpg);">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-        <div id="colorlib-testimony">
+        <div id="colorlib-testimony" style="background: #121212;">
 			<div class="container">
 				<div class="row text-center">
 					<h2 class="bold">Vision</h2>
@@ -150,11 +148,11 @@
 				</div>
 				<div class="row animate-box">
 					<div class="col-md-12 text-center">
-                        <div class="testimony">
+						<div class="testimony">
 							<blockquote>
-                                <p class="mb-4">"From Brain-to-AI, Towards AI-to-Brain"</p>
-								<p style="font-size: 18px; line-height: 1.6;">
-                                    I aim to go beyond simply creating AI that mimics the brain.<br> 
+                                <p class="vision-quote">"From Brain-to-AI, Towards AI-to-Brain"</p>
+                                <p class="vision-desc">
+                                    I aim to go beyond simply creating AI that mimics the brain.<br>
                                     My ultimate goal is to use highly advanced AI models as a <strong>'microscope'</strong> or <strong>'simulator'</strong><br>
                                     to inversely explore the human brain, formulating new scientific questions and finding answers.
                                 </p>
@@ -164,6 +162,53 @@
 				</div>
 			</div>
 		</div>
+
+<div id="colorlib-services">
+            <div class="container">
+                <div class="row text-center">
+                    <h2 class="bold">Interests</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+                        <span>Focus</span>
+                        <h2>Research Interests</h2>
+                        <p style="max-width: 700px; margin: 0 auto; color: #b0b0b0;">My research goal is to internalize the brain's computational principles into AI models and use them to explore the brain again.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4 animate-box">
+                        <div class="services" style="border: 1px solid #333; padding: 30px; height: 100%; border-radius: 10px; background: #1e1e1e;">
+                            <span class="icon" style="margin-bottom: 20px; display: block;">
+                                <i class="icon-lightbulb" style="font-size: 40px; color: #4b6cb7;"></i>
+                            </span>
+                            <h3 style="color: #fff;">Brain-Inspired AI</h3>
+                            <p style="color:#b0b0b0;">Developing AI architectures inspired by neural mechanisms, such as the dual-stream visual pathways (ventral/dorsal) and hierarchical processing.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animate-box">
+                        <div class="services" style="border: 1px solid #333; padding: 30px; height: 100%; border-radius: 10px; background: #1e1e1e;">
+                             <span class="icon" style="margin-bottom: 20px; display: block;">
+                                <i class="icon-monitor" style="font-size: 40px; color: #4b6cb7;"></i>
+                            </span>
+                            <h3 style="color: #fff;">Brain-Computer Interface</h3>
+                            <p style="color:#b0b0b0;">Decoding human intentions and visual experiences from non-invasive signals (EEG, fMRI). Building practical BCI systems for reconstruction.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animate-box">
+                        <div class="services" style="border: 1px solid #333; padding: 30px; height: 100%; border-radius: 10px; background: #1e1e1e;">
+                             <span class="icon" style="margin-bottom: 20px; display: block;">
+                                <i class="icon-layers" style="font-size: 40px; color: #4b6cb7;"></i>
+                            </span>
+                            <h3 style="color: #fff;">Multi-modal Learning</h3>
+                            <p style="color:#b0b0b0;">Integrating various modalities—vision, language, and physiological signals—to create comprehensive AI models (e.g., EEG-fMRI fusion).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<footer>
 			<div id="footer">
