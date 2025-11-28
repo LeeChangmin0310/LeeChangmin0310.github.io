@@ -19,58 +19,40 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
     
-    <style>
-        /* 전체 배경색을 부드러운 다크 그레이로 변경 */
-        body, #colorlib-page, #colorlib-about, #colorlib-services, #colorlib-testimony {
-            background: #1a1a1a !important;
-        }
-        /* 기본 텍스트 색상을 밝은 회색으로 변경 */
-        p {
-            color: #d4d4d4 !important;
-            line-height: 1.8;
-        }
-        /* 소제목 색상 변경 */
-        .heading, .intro-heading h2, h2.bold {
-            color: #e0e0e0 !important;
-        }
-
-        /* 인용구 (Vision) 스타일 - 너비 증가 및 밝기 개선 */
+	<style>
+        /* 인용구 (Vision) 스타일 */
         .vision-quote {
             color: #ffffff !important;
-            font-size: 32px; /* 폰트 크기 약간 증가 */
+            font-size: 28px; /* 크기 약간 축소하여 한 줄에 많이 담기 */
             line-height: 1.4;
             font-family: "Playfair Display", serif;
             font-style: italic;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
-        /* 비전 설명 텍스트 - 너비 증가 (800px -> 900px) */
+        /* 비전 설명 텍스트 - 수정됨 */
         .vision-desc {
-            color: #d4d4d4 !important;
+            color: #d4d4d4 !important; /* 완전 흰색보다 눈이 편한 색 */
             font-size: 18px;
-            line-height: 1.8;
+            line-height: 1.7;
             margin-top: 20px;
-            max-width: 900px; /* 너비를 늘려서 잘림 방지 */
+            width: 100%;         /* 가로폭 꽉 채우기 */
+            max-width: 1000px;   /* 최대 너비를 넉넉하게 늘림 (기존 800px -> 1000px) */
             margin-left: auto;
             margin-right: auto;
+            word-break: keep-all; /* 단어 중간에 끊기지 않게 설정 (한글/영어 혼용 시 중요) */
         }
         
         /* 본문 텍스트 스타일 */
         .about-text {
-            color: #d4d4d4 !important;
+            color: #b0b0b0 !important;
             margin-bottom: 25px;
             font-size: 16px;
             line-height: 1.8;
         }
-        /* 강조 텍스트 (굵게) */
+        /* 강조 텍스트 */
         .about-text strong {
-            color: #fff !important;
+            color: #e6e6e6 !important;
             font-weight: 700;
-        }
-        
-        /* Interest 박스 스타일 */
-        .services {
-            background: #252525 !important; /* 박스 배경색 밝게 */
-            border-color: #3a3a3a !important; /* 테두리색 밝게 */
         }
     </style>
 	</head>

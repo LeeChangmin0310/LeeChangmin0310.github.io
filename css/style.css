@@ -1477,68 +1477,36 @@ a:hover {
 }
 
 /* =======================================================
-* Changmin's FINAL Fixes (Layout, Colors, Overlap)
+* Changmin's ULTIMATE Dark Mode Fixes (Global)
 * ======================================================= */
 
-/* 1. 배경의 거대한 장식 텍스트 (Research, Works 등) 겹침 해결 */
+/* 1. 전체 배경 및 기본 텍스트 */
+body, #colorlib-page, #colorlib-wrapper, 
+#colorlib-about, #colorlib-services, #colorlib-work, 
+#colorlib-testimony, #colorlib-contact, #footer {
+    background: #1a1a1a !important; /* 부드러운 다크 그레이 */
+    color: #b0b0b0 !important;       /* 본문은 눈이 편한 회색 */
+}
+
+/* 2. 모든 제목(Headings) 색상 일괄 변경 (핵심) */
+/* 너무 쨍한 흰색(#fff) 대신 은은한 밝은 회색(#e6e6e6) 사용 */
+h1, h2, h3, h4, h5, h6, 
+.heading, .head-title, .intro-heading h2 {
+    color: #e6e6e6 !important;
+    font-family: "Playfair Display", serif; /* 폰트 통일 */
+}
+
+/* 3. 배경의 거대한 장식 텍스트 (Works, About 등) */
 .bold {
-    color: rgba(255, 255, 255, 0.03) !important; /* 투명도 높여서 은은하게 */
-    font-size: 100px !important; /* 크기를 250px에서 대폭 줄여서 겹침 방지 */
-    top: 30px !important; /* 위쪽 여백 확보 */
+    color: rgba(255, 255, 255, 0.04) !important; /* 아주 희미하게 */
+    font-size: 120px !important; /* 크기 적당히 축소 */
+    top: 40px !important;
     z-index: 0;
     width: 100%;
-    overflow: hidden; /* 화면 밖으로 나가는 것 방지 */
+    overflow: hidden;
 }
 
-/* 2. About 섹션 이름/직함 레이아웃 및 색상 고정 */
-/* 이름 (Changmin Lee) - 흰색 강제 적용 */
-.about-static-title h2:first-child {
-    color: #ffffff !important; 
-    font-family: "Playfair Display", serif;
-    font-size: 45px !important;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 10px !important;
-}
-
-/* 직함 (Brain-AI Researcher) - 파란색 강제 적용 */
-.about-static-title h2:last-child {
-    color: #4b6cb7 !important; 
-    font-family: "Karla", sans-serif; /* 깔끔한 고딕체로 변경 */
-    font-size: 22px !important;
-    font-weight: 400 !important;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 0 !important;
-}
-
-/* 3. Works (프로젝트) 카드 디자인 개선 */
-.work-entry .work-img .display-t .work-name {
-    background: #1e1e1e !important;
-    border: 1px solid #333;
-    padding: 30px 20px !important;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
-    border-radius: 4px;
-}
-
-/* 프로젝트 제목 */
-.work-entry .work-img .display-t .work-name h2 {
-    color: #fff !important;
-    font-size: 20px !important;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin: 0 !important;
-}
-
-/* 호버 시 효과 */
-.work-entry .work-img:hover .display-t .work-name {
-    border-color: #4b6cb7 !important;
-}
-.work-entry .work-img:hover .display-t .work-name h2 {
-    color: #4b6cb7 !important;
-}
-
-/* 4. 섹션 소제목 (Academic, Portfolio 등) 색상 교정 */
+/* 4. 소제목 (Portfolio, Updates, Focus 등) - 포인트 컬러 */
 .intro-heading span {
     color: #4b6cb7 !important;
     font-weight: 700;
@@ -1547,11 +1515,60 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* 섹션 대제목 (Publications, Done Projects 등) */
-.intro-heading h2 {
-    color: #fff !important;
+/* 5. About 섹션 이름/직함 레이아웃 (왼쪽 정렬) */
+.about-static-title h2:first-child {
+    color: #e6e6e6 !important; 
+    font-size: 42px !important;
     font-weight: 700;
-    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 5px !important;
+}
+.about-static-title h2:last-child {
+    color: #4b6cb7 !important; 
+    font-family: "Karla", sans-serif;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0 !important;
+}
+
+/* 6. 카드 박스 디자인 (Projects, News, Interests 공통) */
+.services, .work-entry .desc, .f-entry {
+    background: #252525 !important; /* 카드 배경 */
+    border: 1px solid #3a3a3a;
+    padding: 30px !important;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* 마우스 올렸을 때 효과 */
+.services:hover, .work-entry:hover .desc {
+    border-color: #4b6cb7 !important;
+    transform: translateY(-5px);
+}
+
+/* 카드 내부 텍스트 */
+.services h3, .work-entry .desc h2, .work-entry .desc h3 {
+    color: #fff !important;
+    margin-top: 0;
+}
+.work-entry .desc p, .services p {
+    color: #b0b0b0 !important;
+}
+
+/* 7. Projects (Works) 썸네일 위 박스 스타일링 */
+.work-entry .work-img .display-t .work-name {
+    background: #252525 !important;
+    padding: 2em !important;
+    border: 1px solid #3a3a3a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.work-entry .work-img .display-t .work-name h2 {
+    color: #e6e6e6 !important;
+    font-size: 22px !important;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 /* =======================================================
