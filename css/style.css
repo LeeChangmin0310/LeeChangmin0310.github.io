@@ -1477,56 +1477,81 @@ a:hover {
 }
 
 /* =======================================================
-* Changmin's Fixes (Layout & Colors)
+* Changmin's FINAL Fixes (Layout, Colors, Overlap)
 * ======================================================= */
 
-/* 1. 배경의 거대한 장식 텍스트(Works, About 등) 색상 죽이기 */
+/* 1. 배경의 거대한 장식 텍스트 (Research, Works 등) 겹침 해결 */
 .bold {
-    color: rgba(255, 255, 255, 0.03) !important; /* 아주 희미한 흰색으로 변경 */
-    z-index: 0; /* 뒤로 보내기 */
+    color: rgba(255, 255, 255, 0.03) !important; /* 투명도 높여서 은은하게 */
+    font-size: 100px !important; /* 크기를 250px에서 대폭 줄여서 겹침 방지 */
+    top: 30px !important; /* 위쪽 여백 확보 */
+    z-index: 0;
+    width: 100%;
+    overflow: hidden; /* 화면 밖으로 나가는 것 방지 */
 }
 
-/* 2. 왼쪽 사이드바 이름/직함 레이아웃 수정 */
-.about-static-title h2 {
+/* 2. About 섹션 이름/직함 레이아웃 및 색상 고정 */
+/* 이름 (Changmin Lee) - 흰색 강제 적용 */
+.about-static-title h2:first-child {
+    color: #ffffff !important; 
     font-family: "Playfair Display", serif;
-    font-size: 40px;
+    font-size: 45px !important;
+    font-weight: 700;
     line-height: 1.2;
-    color: #fff !important;
+    margin-bottom: 10px !important;
+}
+
+/* 직함 (Brain-AI Researcher) - 파란색 강제 적용 */
+.about-static-title h2:last-child {
+    color: #4b6cb7 !important; 
+    font-family: "Karla", sans-serif; /* 깔끔한 고딕체로 변경 */
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0 !important;
 }
 
 /* 3. Works (프로젝트) 카드 디자인 개선 */
-/* 썸네일 위 하얀 박스를 다크 모드로 변경 */
 .work-entry .work-img .display-t .work-name {
-    background: #1e1e1e !important; /* 박스 배경을 어둡게 */
+    background: #1e1e1e !important;
     border: 1px solid #333;
-    padding: 2em !important; /* 여백 조정 */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important; /* 그림자 진하게 */
+    padding: 30px 20px !important;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
+    border-radius: 4px;
 }
 
-/* 프로젝트 제목 색상 */
+/* 프로젝트 제목 */
 .work-entry .work-img .display-t .work-name h2 {
     color: #fff !important;
-    font-size: 24px !important;
-    letter-spacing: 2px;
+    font-size: 20px !important;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    margin: 0 !important;
 }
 
-/* 호버 시 텍스트 색상 유지 */
+/* 호버 시 효과 */
+.work-entry .work-img:hover .display-t .work-name {
+    border-color: #4b6cb7 !important;
+}
 .work-entry .work-img:hover .display-t .work-name h2 {
-    color: #4b6cb7 !important; /* 호버하면 파란색 포인트 */
+    color: #4b6cb7 !important;
 }
 
-/* Works 섹션의 "Portfolio" 작은 글씨 색상 */
+/* 4. 섹션 소제목 (Academic, Portfolio 등) 색상 교정 */
 .intro-heading span {
     color: #4b6cb7 !important;
     font-weight: 700;
     letter-spacing: 4px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-/* "Done Projects" 같은 제목 색상 */
+/* 섹션 대제목 (Publications, Done Projects 등) */
 .intro-heading h2 {
     color: #fff !important;
     font-weight: 700;
+    font-size: 36px;
 }
 
 /* =======================================================
